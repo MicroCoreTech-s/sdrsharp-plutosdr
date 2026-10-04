@@ -1,0 +1,15 @@
+# Normalise line endings in the repository, keep the working tree native on Windows.
+* text=auto
+
+*.cs       text diff=csharp
+*.csproj   text
+*.ps1      text
+*.md       text
+*.txt      text
+*.xml      text
+*.json     text
+
+*.png      binary
+*.dll      binary
+*.pdb      binary
+*.zip      binary

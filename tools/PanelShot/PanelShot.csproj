@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PanelShot</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <NoWarn>$(NoWarn);CS0649</NoWarn>
+  </PropertyGroup>
+
+  <!-- Compile the real plug-in sources so the panel under test is the shipping one. -->
+  <ItemGroup>
+    <Compile Include="..\..\src\PlutoSDR\*.cs" />
+    <Compile Include="..\..\src\PlutoSDR\Iio\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SDRSharp.Radio">
+      <HintPath>..\..\src\PlutoSDR\refs\SDRSharp.Radio.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SDRSharp.Common">
+      <HintPath>..\..\src\PlutoSDR\refs\SDRSharp.Common.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SDRSharp.PanView">
+      <HintPath>..\..\src\PlutoSDR\refs\SDRSharp.PanView.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
+
+

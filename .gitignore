@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+dist/
+*.user
+*.suo
+.vs/
+.vscode/
+
+# SDR# host assemblies: Analog Devices property, extracted locally from SDRSharp.dotnetN.exe.
+# Run tools/extract-refs.ps1 to create them. Never commit them.
+src/PlutoSDR/refs/
+
+# Local runtime artifacts
+*.log
+PlutoSDR.config
+
+# OS noise
+Thumbs.db
+desktop.ini
